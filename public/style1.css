@@ -1,0 +1,248 @@
+:root {
+  --primary-color: #8884d8;
+  --secondary-color: #82ca9d;
+  --tertiary-color: #ffc658;
+  --background-color: #f0f2f5;
+  --card-background: #ffffff;
+  --text-color: #333333;
+  --border-color: #e0e0e0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: var(--text-color);
+  background: linear-gradient(to bottom, #f0f2f5, #e0e2e5);
+  margin: 0;
+  padding: 2px;
+}
+
+.nav-bar-container {
+  display: flex;
+  justify-content: space-between;
+  margin: 15px;
+  border: 3px solid var(--primary-color);
+}
+.nav-bar-logo {
+  font-size: larger;
+  padding-left: 10px;
+  color: #333333;
+}
+
+.navbar ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.navbar .nav-link {
+  text-decoration: none;
+  color: rgb(15, 11, 11);
+  font-size: larger;
+  padding: 10px 15px;
+  display: block;
+  margin-right: 15px;
+}
+
+.navbar .nav-link:hover {
+  background-color: var(--primary-color);
+  color: rgb(207, 97, 97);
+  border-radius: 4px;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+.Section {
+  border: 3px solid var(--primary-color);
+  margin: 10px;
+}
+.section-1-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  flex-direction: row;
+}
+
+article {
+  flex: 3;
+  padding: 20px;
+}
+
+aside {
+  text-decoration: none;
+  flex: 1;
+  padding: 20px;
+  background: #f4f4f4;
+  margin-left: 20px;
+  height: 200px;
+}
+
+h1 {
+  text-align: center;
+  color: var(--primary-color);
+  margin-bottom: 2rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/*  slider componenets of wrorking */
+.slider-container {
+  position: relative;
+  display: flex;
+  margin: auto;
+  max-width: 75%;
+  overflow: hidden;
+  border-radius: 10px;
+  border: solid 5px var(--primary-color);
+  background-color: #f4f4f4;
+}
+.slides {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+.slide {
+  min-width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  padding: 20px;
+
+  text-align: center;
+}
+.slider-controls {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.slider_btn {
+  background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+  border: none;
+  border-radius: 5px;
+  padding: 10px; /* Padding for better touch area */
+}
+.card {
+  background-color: var(--card-background);
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  margin-top: 50px;
+}
+
+.card:hover {
+  transform: translateY(5px);
+}
+
+.card-header {
+  padding: 1.5rem;
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.card-header h2 {
+  margin: 0px;
+  font-size: 1.5rem;
+}
+
+.card-header p {
+  margin: 0.5rem 0 0;
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+.card-content {
+  padding: 1.5rem;
+}
+
+.chart-container {
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--background-color);
+  border-radius: 4px;
+}
+
+.chart-placeholder {
+  color: var(--text-color);
+  font-style: italic;
+}
+
+.range-slider {
+  margin-top: 1rem;
+}
+
+.slider {
+  width: 100%;
+  margin-top: 0.5rem;
+}
+
+.button-group {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.btn {
+  padding: 0.5rem 1rem;
+  margin: 0 0.5rem;
+  background-color: var(--background-color);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn.active,
+.btn:hover {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.select {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  background-color: white;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.card {
+  animation: fadeIn 0.5s ease-out;
+}
+footer {
+  text-align: center;
+  background: #4caf50;
+  color: white;
+  padding: 10px 0;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  margin-top: auto;
+}
