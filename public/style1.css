@@ -22,7 +22,8 @@ body {
   display: flex;
   justify-content: space-between;
   margin: 15px;
-  border: 3px solid var(--primary-color);
+  /* border: 3px solid var(--primary-color); */
+  background-color: var(--card-background);
 }
 .nav-bar-logo {
   font-size: larger;
@@ -57,8 +58,11 @@ body {
   padding: 2rem;
 }
 .Section {
-  border: 3px solid var(--primary-color);
-  margin: 10px;
+  background-color: var(--card-background);
+  padding: 20px;
+  border-radius: 8px;
+  /* border: solid 4px var(--primary-color); */
+  margin: 20px;
 }
 .section-1-div {
   display: flex;
@@ -140,13 +144,14 @@ h1 {
 .slides {
   display: flex;
   transition: transform 0.5s ease-in-out;
+  height: 300px;
 }
 .slide {
   min-width: 100%;
   padding: 20px;
   box-sizing: border-box;
-  padding: 20px;
-
+  padding: 40px;
+  height: 250px;
   text-align: center;
 }
 .slider-controls {
@@ -180,10 +185,94 @@ h1 {
   width: 30%;
   margin: 30px;
 }
+
 .section-line {
   width: 80%;
 }
 
+/* courses*/
+#fuel-economy-courses {
+  background-color: var(--card-background);
+  padding: 20px;
+  border-radius: 8px;
+  /* border: solid 4px var(--primary-color); */
+  margin: 20px;
+}
+
+#fuel-economy-courses h2 {
+  text-align: center;
+  color: #333;
+}
+
+.course-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.course {
+  background-color: #fff;
+  border: 2px solid #dbd7d7;
+  border-radius: 6px;
+  padding: 15px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.course h3 {
+  margin: 0;
+  color: #007bff;
+}
+
+.course p {
+  margin: 5px 0;
+  color: #555;
+}
+
+.course a {
+  display: inline-block;
+  margin-top: 10px;
+  text-decoration: none;
+  background-color: #007bff;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 4px;
+}
+.course:hover {
+  transform: scale(1.03);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.course a:hover {
+  background-color: #0056b3;
+}
+
+.course-list .container {
+  display: flex;
+  flex-direction: row;
+}
+/*  end -course section*/
+
+/*  FAQs section */
+.FAQs-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+ul.course-list {
+  list-style: none;
+  padding-left: 0;
+}
+ul.course-list li::before {
+  content: '+';
+  font-weight: bold;
+  color: var(--primary-color);
+  margin-right: 8px;
+}
+.FAQs-section-container {
+  margin: 10px;
+  background-color: rgb(233, 230, 230);
+  border-radius: 8px;
+}
+
+/* end -FAQs section */
 .card {
   background-color: var(--card-background);
   border-radius: 8px;
