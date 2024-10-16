@@ -256,22 +256,27 @@ h1 {
   flex-direction: row;
   justify-content: space-between;
 }
-ul.course-list {
-  list-style: none;
-  padding-left: 0;
-}
-ul.course-list li::before {
-  content: '+';
-  font-weight: bold;
-  color: var(--primary-color);
-  margin-right: 8px;
-}
+
 .FAQs-section-container {
   margin: 10px;
   background-color: rgb(233, 230, 230);
   border-radius: 8px;
+  cursor: pointer;
+  padding: 8px;
 }
-
+.FAQs-section-container::before {
+  content: '+';
+  font-weight: bold;
+  color: var(--primary-color);
+  margin: 15px;
+  margin-top: 10px;
+}
+.FAQs-section-container:hover {
+  background-color: #b8a6a6;
+}
+.hidden {
+  display: none;
+}
 /* end -FAQs section */
 .card {
   background-color: var(--card-background);
