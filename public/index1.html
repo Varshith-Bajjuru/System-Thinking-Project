@@ -6,7 +6,6 @@
     <title>Fuel Economy Analysis</title>
     <link rel="icon" href="./images/fuelLogo.jpeg" type="image/png">
     <link rel="stylesheet" href="style1.css" />
-   
     <script defer src="script1.js"></script>
   </head>
   <body>
@@ -274,11 +273,7 @@
     </div>
        </section>
       <section class="Section" id="FAQs" >
-        <div class="section-container"> 
-          <h2>FAQs</h2>
-          <p>(In this section you can find the questions on FAQs)</p><hr class="section-line">
-        </div>
-
+          <h2 class="section-title">FAQs</h2>
         <br />
 <div class="FAQs-section">
     <div class="FAQs-container" >
@@ -380,115 +375,72 @@
       </section>
       
       <section class="Section" id="Blog">
-        <div class="section-container">
-          <h2>Blog</h2>
-          <p>
-            (In this section you can find about the news regarding to the fuels
-            economy)
-          </p><hr class="section-line">
-        </div>
-
-        <ul>
-          <li>
-            <strong>Latest Industry Trends : </strong>Share articles and updates
-            about advancements in fuel economy technologies, changes in
-            regulations, and market trends affecting fuel consumption.
-          </li>
-          <li>
-            <strong>Research Findings :</strong> Publish summaries of recent
-            studies and reports that explore the impacts of fuel economy on the
-            environment and the economy.
-          </li>
-
-          <li>
-            <strong>Success Stories :</strong> Feature case studies of
-            individuals or organizations that have successfully improved their
-            fuel efficiency and reduced emissions.
-          </li>
-        </ul>
-      </section>
-      <section class="Section" id="about">
-        <div class="section-container">
-          <h2>About</h2>
-          <p>
-            (We are dedicated to prompting the fuel efficiency and sustainable
-            transpotation practices)
-          </p><hr class="section-line">
-        </div>
-
-        <form class="about-container-form">
-          <label for="distance"><strong>Annual Mileage : </strong></label>
-          <input
-            type="number"
-            id="distance"
-            placeholder="Enter the distance "
-            name="distance"
-            required
-          />
-          <br />
-          <label for="current-mpg"
-            ><strong>Current MPG &nbsp &nbsp &nbsp: </strong></label
-          >
-          <input
-            type="number"
-            id="current-mpg"
-            placeholder="Enter the Current Mpg"
-            name="current-mpg"
-            required
-          />
-          <br />
-          <label for="target-mpg"
-            ><strong>Target Mpg &nbsp &nbsp &nbsp &nbsp : </strong></label
-          >
-          <input
-            type="number"
-            id="target-mpg"
-            placeholder="Enter the target Mpg "
-            name="target-mpg"
-            required
-          />
-          <div style="text-align: center">
-            <button
-              style="
-                text-align: center;
-                background-color: var(--primary-color);
-                margin-top: 20px;
-              "
-            >
-              <strong>Calulate Fuel efficiency</strong>
-            </button>
+        <h2 class="section-title">Blog</h2>
+        <section class="blog-preview">
+          <div class="container">
+              <div class="blog-grid" id="blogGrid">
+                  <!-- Blog posts will be dynamically inserted here -->
+              </div>
+              <div class="view-all">
+                  <a href="/blog" class="btn">View All Posts</a>
+              </div>
           </div>
-        </form>
-        <br />
-
-        <ul>
-          <li>
-            <strong>Mission Statement :</strong> Describe the mission of your
-            website, focusing on educating the public about fuel economy and
-            promoting sustainable practices.
-          </li>
-          <li>
-            <strong>Team Introduction :</strong> Introduce the team behind the
-            website, including experts in fuel economy, environmental science,
-            and web development.
-          </li>
-          <li>
-            <strong> Partnerships and Collaborations :</strong> Highlight any
-            partnerships with educational institutions, environmental
-            organizations, or industry stakeholders aimed at advancing fuel
-            economy knowledge.
-          </li>
-        </ul>
       </section>
+      </section>
+     <section class="about-section">
+      <div class="about-section-container">
+        <h1>About Our Website</h1>
+        <p>We are committed to creating an informative platform to promote fuel efficiency and sustainable transportation practices.</p>
+      </div>
+    
+    <div class="mission-section">
+        <h2>Our Mission</h2>
+        <p>Our mission is to educate visitors about fuel economy while providing tools for analysis and improvement. We aim to foster a more sustainable future by helping individuals and businesses optimize their fuel consumption.</p>
     </div>
+    
+ 
+    <div class="calculator-section">
+        <h2>Fuel Efficiency Calculator</h2>
+        <form id="efficiency-form">
+            <div class="form-group">
+                <label for="annual-mileage">Annual Mileage:</label>
+                <input type="number" id="annual-mileage" name="annual-mileage" required>
+            </div>
+            <div class="form-group">
+                <label for="current-mpg">Current MPG:</label>
+                <input type="number" id="current-mpg" name="current-mpg" required>
+            </div>
+            <div class="form-group">
+                <label for="target-mpg">Target MPG:</label>
+                <input type="number" id="target-mpg" name="target-mpg" required>
+            </div>
+            <button type="submit">Calculate</button>
+        </form>
+        <div id="result" class="hidden">
+            <h3>Result:</h3>
+            <p>You could save approximately <span id="fuel-saved"></span> gallons of fuel per year by improving your fuel efficiency.</p>
+        </div>
+    </div>
+    
+    <div class="partnerships-section">
+        <h2>Our Partnerships</h2>
+        <ul>
+            <li>Environmental Protection Agency (EPA)</li>
+            <li>Department of Energy (DOE)</li>
+            <li>National Highway Traffic Safety Administration (NHTSA)</li>
+            <li>Various automotive manufacturers</li>
+        </ul>
+   </div>  
+  </section >
 
-    <div class="container">
+
+    <section class="container">
       <h1>Fuel Economy Analysis</h1>
 
       <div class="grid">
         <div class="card">
           <div class="card-header">
-            <h2>Historical Data</h2>
+            <h2 style="color:white">Historical Data</h2>
             <p>Past fuel consumption, emissions, and efficiency</p>
           </div>
           <div class="card-content">
@@ -500,7 +452,7 @@
 
         <div class="card">
           <div class="card-header">
-            <h2>Future Predictions</h2>
+            <h2 style="color:white">Future Predictions</h2>
             <p>Projected trends for the coming years</p>
           </div>
           <div class="card-content">
@@ -555,9 +507,43 @@
         </div>
       </div>
     </div>
-    <footer>
-      <p>&copy; 2024. All Rights Reserved.</p>
+    <footer class="footer">
+      <div class="container">
+        <div class="grid">
+          <div>
+            <h3 class="title">About Us</h3>
+            <p class="description">We are dedicated to promoting fuel efficiency and sustainable transportation practices.</p>
+          </div>
+          <div>
+            <h3 class="title">Quick Links</h3>
+            <ul class="quick-links">
+              <li><a href="/" class="link">Home</a></li>
+              <li><a href="/courses" class="link">Courses</a></li>
+              <li><a href="/tools" class="link">Analysis Tools</a></li>
+              <li><a href="/blog" class="link">Blog</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="title">Contact Us</h3>
+            <p class="description">Email: info@fueleconomy.com</p>
+            <p class="description">Phone: +91 9110385587</p>
+          </div>
+          <div>
+            <h3 class="title">Follow Us</h3>
+            <div class="social-links">
+              <a href="#" class="social-icon"><Facebook size={20} /></a>
+              <a href="#" class="social-icon"><Twitter size={20} /></a>
+              <a href="#" class="social-icon"><Instagram size={20} /></a>
+              <a href="#" class="social-icon"><Linkedin size={20} /></a>
+            </div>
+          </div>
+        </section>
+        <div class="footer-bottom">
+          <p class="footer-text">&copy; 2024 Fuel Economy Analysis. All rights reserved.</p>
+        </div>
+      </div>
     </footer>
+    
   </body>
 </html> 
 

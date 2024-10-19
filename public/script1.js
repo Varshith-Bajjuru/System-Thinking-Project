@@ -56,3 +56,78 @@ document
     e.preventDefault();
     document.getElementById('FAQs').scrollIntoView({ behavior: 'smooth' });
   });
+const blogPosts = [
+  {
+    title: 'The Future of Fuel Economy: Trends and Predictions',
+    excerpt:
+      'Explore the latest trends in fuel economy and what experts predict for the future of transportation.',
+    date: '2024-05-15',
+    author: 'Jane Doe',
+    slug: 'future-of-fuel-economy',
+  },
+  {
+    title: "10 Tips to Maximize Your Vehicle's Fuel Efficiency",
+    excerpt:
+      'Learn practical tips and tricks to get the most out of every gallon of fuel in your vehicle.',
+    date: '2024-05-10',
+    author: 'John Smith',
+    slug: 'maximize-fuel-efficiency',
+  },
+  {
+    title: 'Electric vs. Hybrid: A Comprehensive Comparison',
+    excerpt:
+      'Dive into the pros and cons of electric and hybrid vehicles in terms of fuel economy and environmental impact.',
+    date: '2024-05-05',
+    author: 'Alex Johnson',
+    slug: 'electric-vs-hybrid',
+  },
+];
+
+function createBlogPostCard(post) {
+  const card = document.createElement('div');
+  card.className = 'card';
+
+  const cardHeader = document.createElement('div');
+  cardHeader.className = 'card-header';
+
+  const cardTitle = document.createElement('h3');
+  cardTitle.className = 'card-title';
+  cardTitle.textContent = post.title;
+
+  const cardDescription = document.createElement('p');
+  cardDescription.className = 'card-description';
+  cardDescription.textContent = `${post.date} | By ${post.author}`;
+
+  cardHeader.appendChild(cardTitle);
+  cardHeader.appendChild(cardDescription);
+
+  const cardContent = document.createElement('div');
+  cardContent.className = 'card-content';
+  const excerpt = document.createElement('p');
+  excerpt.textContent = post.excerpt;
+  cardContent.appendChild(excerpt);
+
+  const cardFooter = document.createElement('div');
+  cardFooter.className = 'card-footer';
+  const readMoreLink = document.createElement('a');
+  readMoreLink.href = `/blog/${post.slug}`;
+  readMoreLink.className = 'btn btn-outline';
+  readMoreLink.textContent = 'Read More';
+  cardFooter.appendChild(readMoreLink);
+
+  card.appendChild(cardHeader);
+  card.appendChild(cardContent);
+  card.appendChild(cardFooter);
+
+  return card;
+}
+
+function renderBlogPosts() {
+  const blogGrid = document.getElementById('blogGrid');
+  blogPosts.forEach(post => {
+    const card = createBlogPostCard(post);
+    blogGrid.appendChild(card);
+  });
+}
+
+document.addEventListener('DOMContentLoaded', renderBlogPosts);

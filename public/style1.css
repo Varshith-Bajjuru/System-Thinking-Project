@@ -209,25 +209,6 @@ h1 {
 }
 
 /*  sections information*/
-.section-container {
-  text-align: center;
-}
-.about-container-form {
-  text-align: center;
-  background-color: #ffffff;
-  margin-left: 450px;
-  margin-right: 450px;
-  padding: 20px;
-}
-
-.about-container input {
-  width: 30%;
-  margin: 30px;
-}
-
-.section-line {
-  width: 80%;
-}
 
 /* courses*/
 #fuel-economy-courses {
@@ -332,6 +313,182 @@ h1 {
 }
 
 /* end -FAQs section */
+
+/* Bolg sections */
+.blog-preview {
+  padding: 4rem 1rem;
+  background-color: #f3f4f6;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-title {
+  font-size: 1.875rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 2rem;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.card-header {
+  padding: 1.5rem 1.5rem 0.5rem;
+}
+
+.card-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.card-description {
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+.card-content {
+  padding: 1rem 1.5rem;
+}
+
+.card-footer {
+  padding: 1rem 1.5rem;
+  text-align: right;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background-color: #3b82f6;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 0.25rem;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #2563eb;
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: #3b82f6;
+  border: 1px solid #3b82f6;
+}
+
+.btn-outline:hover {
+  background-color: #3b82f6;
+  color: #fff;
+}
+
+.view-all {
+  text-align: center;
+  margin-top: 2rem;
+}
+.view-all .btn {
+  border: 2px solid black;
+  color: black;
+  background-color: transparent;
+}
+/* End Blog section */
+
+/* About-section*/
+.about-section {
+  margin-bottom: 3rem;
+}
+.about-section-container {
+  text-align: center;
+}
+.about-section h1 {
+  font-size: 2.5rem;
+  color: var(--primary-color);
+}
+
+.mission-section {
+  margin-bottom: 3rem;
+  padding: 20px;
+  text-align: center;
+}
+.calculator-section {
+  align-items: center;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+.partnerships-section {
+  padding-left: 100px;
+}
+h2 {
+  color: var(--primary-color);
+  border-bottom: 2px solid var(--border-color);
+  padding-bottom: 0.5rem;
+}
+
+.calculator-section {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+input[type='number'] {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+}
+
+button {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+button:hover {
+  background-color: #3a7bc8;
+}
+
+.hidden {
+  display: none;
+}
+
+.partnerships-section ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.partnerships-section li {
+  margin-bottom: 0.5rem;
+}
+
+/* ends about section */
+
+/* Fuel-economy -analysis */
 .card {
   background-color: var(--card-background);
   border-radius: 8px;
@@ -354,6 +511,7 @@ h1 {
 .card-header h2 {
   margin: 0px;
   font-size: 1.5rem;
+  color: white;
 }
 
 .card-header p {
@@ -365,7 +523,9 @@ h1 {
 .card-content {
   padding: 1.5rem;
 }
-
+.grid {
+  width: 2400px;
+}
 .chart-container {
   height: 300px;
   display: flex;
@@ -373,6 +533,7 @@ h1 {
   justify-content: center;
   background-color: var(--background-color);
   border-radius: 4px;
+  padding: 20px;
 }
 
 .chart-placeholder {
@@ -420,6 +581,89 @@ h1 {
   background-color: white;
 }
 
+.card {
+  animation: fadeIn 0.5s ease-out;
+}
+/* end-Fuel-economy -analysis */
+
+/* Footer section details*/
+.footer {
+  margin-top: 20px;
+  background-color: #2c3e50;
+  color: white;
+  padding: 3rem 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.grid {
+  display: grid;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.description,
+.link,
+.footer-text {
+  font-size: 0.875rem;
+}
+
+.quick-links {
+  list-style-type: none;
+  padding: 0;
+}
+
+.quick-links li {
+  margin-bottom: 0.5rem;
+}
+
+.link {
+  color: white;
+  text-decoration: none;
+}
+
+.link:hover,
+.social-icon:hover {
+  color: #3498db;
+}
+
+.social-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.footer-bottom {
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid #7f8c8d;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .blog-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .blog-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -428,17 +672,8 @@ h1 {
     opacity: 1;
   }
 }
-
-.card {
-  animation: fadeIn 0.5s ease-out;
-}
-footer {
-  text-align: center;
-  background-color: #2c3e50;
-  color: white;
-  padding: 10px 0;
-  position: relative;
-  bottom: 0;
-  width: 100%;
-  margin-top: auto;
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
