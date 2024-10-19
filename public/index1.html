@@ -6,63 +6,68 @@
     <title>Fuel Economy Analysis</title>
     <link rel="icon" href="./images/fuelLogo.jpeg" type="image/png">
     <link rel="stylesheet" href="style1.css" />
+   
     <script defer src="script1.js"></script>
   </head>
   <body>
-    <div class="nav-bar-container">
-      <h1 class="nav-bar-logo">Logo is here</h1>
-      <nav class="navbar main">
-        <ul>
-          <li class="nav-item">
-            <a class="nav-link" href="#home"><strong>Home</strong></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#courses"><strong>Courses</strong></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#FAQs"><strong>FAQs</strong></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#news"><strong>News </strong></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#about"><strong>About</strong></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="login.html"><strong>Login/Signup</strong></a>
-          </li>
-        </ul>
-      </nav>
+    <div class="wrapper">
+      <div class="nav-bar-container">
+        <img src="images/fuelLogo.jpeg" class="nav-bar-logo">
+        <nav class="navbar main">
+          <ul>
+            <li class="nav-item">
+              <a class="nav-link" href="#home"><strong>Home</strong></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#courses"><strong>Courses</strong></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#FAQs"><strong>FAQs</strong></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#Blog"><strong>Blog</strong></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about"><strong>About</strong></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="login.html"><strong>Login/Signup</strong></a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="section-1-div">
+           
+        <h1 style="font-size: 50px;" class="main-heading">
+          Fuel 
+          <br>
+          <span class="highlight" style="color: #4a90e2;">Economy</span>
+          Analysis
+        </h1>
+        
+        <div style="text-align: center; " class="video-container">
+          <video
+            width="540"
+            height="300"
+            src="videos/video1.mp4"
+            frameborder="0"
+            allowfullscreen
+            style="border:solid rgb(163, 163, 165) 5px; border-radius: 10px;"
+            controls
+            
+          >
+          </video>
+          <br />
+          Fuel economy analysis
+        </div>
+      </div>
+  
     </div>
 
     <div>
       <section class="Section" id="home" class="slide">
-        <!-- <h1 style="text-align: center;">Home</h1> -->
-        <div class="section-1-div">
-         
-          <h1 style="font-size: 50px;">
-            Fuel 
-            <br>
-            <span class="highlight" style="color: orange;">Economy</span>
-            Analysis
-          </h1>
-          
-          <div style="text-align: center; " class="video-container">
-            <video
-              width="640"
-              height="360"
-              src="videos/video1.mp4"
-              frameborder="0"
-              allowfullscreen
-              style="border:solid rgb(163, 163, 165) 5px; border-radius: 10px;"
-              controls
-              
-            >
-            </video>
-            <br />
-            Fuel economy analysis
-          </div>
-        </div>
+    
+      
         
         <div class="section-1-container">
           <article>
@@ -268,8 +273,8 @@
            
     </div>
        </section>
-      <section class="Section" id="FAQs">
-        <div class="section-container">
+      <section class="Section" id="FAQs" >
+        <div class="section-container"> 
           <h2>FAQs</h2>
           <p>(In this section you can find the questions on FAQs)</p><hr class="section-line">
         </div>
@@ -277,7 +282,7 @@
         <br />
 <div class="FAQs-section">
     <div class="FAQs-container" >
-      <div class="FAQs-section-container">
+      <div class="FAQs-section-container" data-faq="1">
         <h3 class="Question"> What is fuel economy and why is it important?</h3>
           <ul class="answer hidden">
            <li>Answer: Fuel economy refers to how efficiently a vehicle uses fuel, usually measured in miles per gallon (MPG) or
@@ -286,7 +291,7 @@
            </li>
           </ul> 
        </div>
-      <div class="FAQs-section-container">
+      <div class="FAQs-section-container" data-faq="2">
         <h3 class="Question">How is fuel economy calculated?</h3>
       <ul class="answer hidden">
         <li>Answer: Fuel economy is calculated by dividing the distance a vehicle travels by the amount of fuel consumed. For example,
@@ -295,7 +300,7 @@
       </ul>
 
      </div>
-     <div class="FAQs-section-container">
+     <div class="FAQs-section-container" data-faq="3">
       <h3 class="Question">What factors affect a vehicle’s fuel economy?</h3>
         <ul class="answer hidden">
           <li>Answer: Several factors affect fuel economy, including driving habits, vehicle maintenance, weather conditions, load weight,
@@ -303,7 +308,7 @@
               economy.</li>
         </ul>
      </div>
-     <div class="FAQs-section-container">
+     <div class="FAQs-section-container" data-faq="4">
       <h3  class="Question">How can I improve my vehicle’s fuel economy?</h3>
         <ul class="answer hidden">
           <li>Answer: You can improve fuel economy by maintaining proper tire pressure, reducing excess weight in the vehicle,
@@ -312,7 +317,7 @@
           </li>
         </ul>
      </div>
-     <div class="FAQs-section-container">
+     <div class="FAQs-section-container" data-faq="5">
       <h3  class="Question">How do hybrid and electric vehicles improve fuel economy?</h3>
       <ul  class="answer hidden">
         <li>Answer: Hybrid vehicles combine a gasoline engine with an electric motor, allowing for better fuel economy by using electric
@@ -323,15 +328,15 @@
      </div>
    </div>
    <div class="FAQs-container">
-        <div class="FAQs-section-container">
-          <h3  class="Question">What is the EPA’s role in fuel economy ratings?</h3>
+        <div class="FAQs-section-container" data-faq="6">
+          <h3  class="Question" >What is the EPA’s role in fuel economy ratings?</h3>
           <ul  class="answer hidden">
             <li>Answer: The Environmental Protection Agency (EPA) tests vehicles and provides official fuel economy ratings in the U.S.
               These ratings help consumers compare different vehicles' fuel efficiency. The tests are conducted under controlled conditions 
               to simulate city and highway driving.</li>
           </ul>
          </div>
-         <div class="FAQs-section-container">
+         <div class="FAQs-section-container" data-faq="7">
           <h3 class="Question">Does the type of fuel I use affect fuel economy?</h3>
           <ul  class="answer hidden">
             <li>
@@ -341,7 +346,7 @@
               </li>
           </ul>
          </div>
-         <div class="FAQs-section-container">
+         <div class="FAQs-section-container "data-faq="8">
           <h3 class="Question">What is the difference between fuel economy and fuel efficiency?</h3>
           <ul  class="answer hidden">
             <li>
@@ -351,7 +356,7 @@
             </li>
           </ul>
          </div>
-         <div class="FAQs-section-container">
+         <div class="FAQs-section-container" data-faq="9">
           <h3 class="Question">What is the difference between conventional gasoline vehicles and fuel-efficient models?</h3>
           <ul  class="answer hidden">
             <li>
@@ -361,7 +366,7 @@
             </li>
           </ul>
          </div>
-         <div class="FAQs-section-container">
+         <div class="FAQs-section-container" data-faq="10">
           <h3 class="Question">Are fuel economy estimates accurate for real-world driving?</h3>
           <ul  class="answer hidden">
             <li>Answer: Fuel economy estimates provided by the EPA or manufacturers are based on controlled tests and may not exactly 
@@ -374,9 +379,9 @@
 </div>
       </section>
       
-      <section class="Section" id="news">
+      <section class="Section" id="Blog">
         <div class="section-container">
-          <h2>news</h2>
+          <h2>Blog</h2>
           <p>
             (In this section you can find about the news regarding to the fuels
             economy)

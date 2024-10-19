@@ -6,7 +6,7 @@ const btnleft = document.querySelector('.slider-controls .btn_left');
 const btnright = document.querySelector('.slider-controls .btn_right');
 
 // FAQs buttons
-const FAQs = document.querySelectorAll('.FAQs-section-container');
+const FAQs = document.querySelectorAll('.FAQs-section');
 const questions = document.querySelectorAll('.Question');
 
 let currentIndex = 0;
@@ -29,10 +29,30 @@ translateSlide(currentIndex);
 
 // FAQs events handling
 
+// FAQs.addEventListener('click', function (event) {
+//   const questionContainer = event.target.closest('.FAQs-section-container');
+
+//   if (questionContainer) {
+//     const answer = questionContainer.querySelector('.answer');
+//     questionContainer.classList.toggle('open');
+//     answer.classList.toggle('show');
+//     answer.classList.toggle('hidden');
+//   }
+// });
 questions.forEach(question => {
-  question.addEventListener('click', function (event) {
-    event.stopPropagation();
-    const Answer = question.nextElementSibling;
-    Answer.classList.toggle('hidden');
+  question.addEventListener('click', function () {
+    const answer = question.nextElementSibling;
+    answer.classList.toggle('hidden');
+    answer.classList.toggle('show');
+
+    // Toggle icon
+    const isVisible = !answer.classList.contains('hidden');
+    question.querySelector('::before').textContent = isVisible ? '-' : '+';
   });
 });
+document
+  .querySelector('.FAQs-section-container')
+  .addEventListener('click', function (e) {
+    e.preventDefault();
+    document.getElementById('FAQs').scrollIntoView({ behavior: 'smooth' });
+  });
