@@ -7,6 +7,8 @@
     <link rel="icon" href="./images/fuelLogo.jpeg" type="image/png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="style1.css" />
+    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script defer src="script1.js"></script>
   </head>
   <body>
@@ -281,7 +283,7 @@
       <div class="FAQs-section-container" data-faq="1">
         <h3 class="Question"> What is fuel economy and why is it important?</h3>
           <ul class="answer hidden">
-           <li>Answer: Fuel economy refers to how efficiently a vehicle uses fuel, usually measured in miles per gallon (MPG) or
+           <li>Fuel economy refers to how efficiently a vehicle uses fuel, usually measured in miles per gallon (MPG) or
              liters per 100 kilometers (L/100km). It is important because higher fuel economy means lower fuel consumption,
               which can save money and reduce environmental impact by cutting down on greenhouse gas emissions.
            </li>
@@ -290,7 +292,7 @@
       <div class="FAQs-section-container" data-faq="2">
         <h3 class="Question">How is fuel economy calculated?</h3>
       <ul class="answer hidden">
-        <li>Answer: Fuel economy is calculated by dividing the distance a vehicle travels by the amount of fuel consumed. For example,
+        <li> Fuel economy is calculated by dividing the distance a vehicle travels by the amount of fuel consumed. For example,
            if a car travels 300 miles and uses 10 gallons of fuel, the fuel economy is 30 MPG (miles per gallon).
         </li>
       </ul>
@@ -299,7 +301,7 @@
      <div class="FAQs-section-container" data-faq="3">
       <h3 class="Question">What factors affect a vehicle’s fuel economy?</h3>
         <ul class="answer hidden">
-          <li>Answer: Several factors affect fuel economy, including driving habits, vehicle maintenance, weather conditions, load weight,
+          <li> Several factors affect fuel economy, including driving habits, vehicle maintenance, weather conditions, load weight,
              aerodynamics, and the type of fuel used. For example, aggressive driving, heavy loads, and under-inflated tires can decrease fuel
               economy.</li>
         </ul>
@@ -307,7 +309,7 @@
      <div class="FAQs-section-container" data-faq="4">
       <h3  class="Question">How can I improve my vehicle’s fuel economy?</h3>
         <ul class="answer hidden">
-          <li>Answer: You can improve fuel economy by maintaining proper tire pressure, reducing excess weight in the vehicle,
+          <li> You can improve fuel economy by maintaining proper tire pressure, reducing excess weight in the vehicle,
              avoiding aggressive driving, keeping your engine properly tuned, and using the recommended grade of motor oil. Additionally,
               driving at moderate speeds and using cruise control on highways can help.
           </li>
@@ -316,7 +318,7 @@
      <div class="FAQs-section-container" data-faq="5">
       <h3  class="Question">How do hybrid and electric vehicles improve fuel economy?</h3>
       <ul  class="answer hidden">
-        <li>Answer: Hybrid vehicles combine a gasoline engine with an electric motor, allowing for better fuel economy by using electric
+        <li> Hybrid vehicles combine a gasoline engine with an electric motor, allowing for better fuel economy by using electric
            power at lower speeds or during idling. Electric vehicles (EVs) don't use gasoline at all, relying entirely on electric power,
             which can dramatically improve efficiency and reduce fuel costs.
            </li>
@@ -327,7 +329,7 @@
         <div class="FAQs-section-container" data-faq="6">
           <h3  class="Question" >What is the EPA’s role in fuel economy ratings?</h3>
           <ul  class="answer hidden">
-            <li>Answer: The Environmental Protection Agency (EPA) tests vehicles and provides official fuel economy ratings in the U.S.
+            <li>The Environmental Protection Agency (EPA) tests vehicles and provides official fuel economy ratings in the U.S.
               These ratings help consumers compare different vehicles' fuel efficiency. The tests are conducted under controlled conditions 
               to simulate city and highway driving.</li>
           </ul>
@@ -336,7 +338,7 @@
           <h3 class="Question">Does the type of fuel I use affect fuel economy?</h3>
           <ul  class="answer hidden">
             <li>
-              Answer: Yes, the type of fuel can affect fuel economy. For example, higher-octane fuels may not necessarily improve fuel 
+               Yes, the type of fuel can affect fuel economy. For example, higher-octane fuels may not necessarily improve fuel 
               efficiency in engines designed for regular fuel. Ethanol-blended fuels can also reduce fuel economy slightly because ethanol 
               contains less energy per gallon than gasoline.
               </li>
@@ -346,7 +348,7 @@
           <h3 class="Question">What is the difference between fuel economy and fuel efficiency?</h3>
           <ul  class="answer hidden">
             <li>
-              Answer: While often used interchangeably, fuel economy refers to how far a vehicle can travel on a certain amount of fuel,
+               While often used interchangeably, fuel economy refers to how far a vehicle can travel on a certain amount of fuel,
                typically expressed in MPG or L/100km. Fuel efficiency, on the other hand, refers to how effectively the engine converts fuel
                into usable energy, and is a more technical measure of engine performance.
             </li>
@@ -356,7 +358,7 @@
           <h3 class="Question">What is the difference between conventional gasoline vehicles and fuel-efficient models?</h3>
           <ul  class="answer hidden">
             <li>
-              Answer: Fuel-efficient vehicles are designed with technologies like turbocharging, direct injection, lighter materials,
+               Fuel-efficient vehicles are designed with technologies like turbocharging, direct injection, lighter materials,
                and improved aerodynamics to maximize fuel economy. In contrast, conventional gasoline vehicles typically don't include 
                these advanced features and may have lower MPG ratings.
             </li>
@@ -365,7 +367,7 @@
          <div class="FAQs-section-container" data-faq="10">
           <h3 class="Question">Are fuel economy estimates accurate for real-world driving?</h3>
           <ul  class="answer hidden">
-            <li>Answer: Fuel economy estimates provided by the EPA or manufacturers are based on controlled tests and may not exactly 
+            <li> Fuel economy estimates provided by the EPA or manufacturers are based on controlled tests and may not exactly 
               reflect real-world driving conditions. Actual fuel economy may vary depending on factors such as driving habits, 
               road conditions, weather, and vehicle maintenance.
             </li>
@@ -399,30 +401,32 @@
         <p>Our mission is to educate visitors about fuel economy while providing tools for analysis and improvement. We aim to foster a more sustainable future by helping individuals and businesses optimize their fuel consumption.</p>
     </div>
     
- 
     <div class="calculator-section">
-        <h2>Fuel Efficiency Calculator</h2>
-        <form id="efficiency-form">
-            <div class="form-group">
-                <label for="annual-mileage">Annual Mileage:</label>
-                <input type="number" id="annual-mileage" name="annual-mileage" required>
-            </div>
-            <div class="form-group">
-                <label for="current-mpg">Current MPG:</label>
-                <input type="number" id="current-mpg" name="current-mpg" required>
-            </div>
-            <div class="form-group">
-                <label for="target-mpg">Target MPG:</label>
-                <input type="number" id="target-mpg" name="target-mpg" required>
-            </div>
-            <button type="submit">Calculate</button>
-        </form>
-        <div id="result" class="hidden">
-            <h3>Result:</h3>
-            <p>You could save approximately <span id="fuel-saved"></span> gallons of fuel per year by improving your fuel efficiency.</p>
-        </div>
+      <h2>Fuel Efficiency Calculator</h2>
+      <form id="efficiency-form">
+          <div class="form-group">
+              <label for="annual-mileage">Annual Mileage:</label>
+              <input type="number" id="annual-mileage" name="annual-mileage" min="0" placeholder="Enter the annual mileage (miles)" required>
+          </div>
+          <div class="form-group">
+              <label for="current-mpg">Current MPG:</label>
+              <input type="number" id="current-mpg" name="current-mpg" min="0" placeholder="Enter the current MPG" required>
+          </div>
+          <div class="form-group">
+              <label for="target-mpg">Target MPG:</label>
+              <input type="number" id="target-mpg" name="target-mpg" min="0" placeholder="Enter the target MPG" required>
+          </div>
+          <button type="submit">Calculate</button>
+      </form>
+      <div id="loading" class="hidden">Calculating...</div>
+      <div id="result" class="hidden">
+          <h3>Result:</h3>
+          <p>You could save approximately <span id="fuel-saved"></span> gallons of fuel per year by improving your fuel efficiency.</p>
+      </div>
+      <div class="chart-container-about hidden">
+        <canvas id="fuel-chart" width="300" height="300"></canvas>
     </div>
-    
+  </div>
     <div class="partnerships-section">
         <h2>Our Partnerships</h2>
         <ul>
@@ -547,6 +551,7 @@
         <p><a href="#privacy">Privacy Policy</a> | <a href="#terms">Terms of Service</a></p>
       </div>
     </footer>
+
 
   </body>
 </html> 

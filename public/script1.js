@@ -27,18 +27,6 @@ btnleft.addEventListener('click', showPreviousSlide);
 btnright.addEventListener('click', showNextSlide);
 translateSlide(currentIndex);
 
-// FAQs events handling
-
-// FAQs.addEventListener('click', function (event) {
-//   const questionContainer = event.target.closest('.FAQs-section-container');
-
-//   if (questionContainer) {
-//     const answer = questionContainer.querySelector('.answer');
-//     questionContainer.classList.toggle('open');
-//     answer.classList.toggle('show');
-//     answer.classList.toggle('hidden');
-//   }
-// });
 questions.forEach(question => {
   question.addEventListener('click', function () {
     const answer = question.nextElementSibling;
@@ -131,3 +119,111 @@ function renderBlogPosts() {
 }
 
 document.addEventListener('DOMContentLoaded', renderBlogPosts);
+
+// fuel economy calculator
+const EfficiencyForm = document.getElementById('efficiency-form');
+const Loading = document.getElementById('loading');
+const fuelChartCanvas = document.getElementById('fuel-chart');
+const chartContainer = document.querySelector('.chart-container-about');
+let fuelChart;
+
+EfficiencyForm.addEventListener('submit', function (event) {
+  event.preventDefault();
+  Loading.classList.remove('hidden');
+  setTimeout(() => {
+    const annualMileage = parseFloat(
+      document.getElementById('annual-mileage').value
+    );
+    const currentMpg = parseFloat(document.getElementById('current-mpg').value);
+    const targetMpg = parseFloat(document.getElementById('target-mpg').value);
+
+    const fuelSaved = (
+      annualMileage / currentMpg -
+      annualMileage / targetMpg
+    ).toFixed(2);
+    if (!isNaN(fuelSaved) && fuelSaved >= 0) {
+      document.getElementById('fuel-saved').innerText = fuelSaved;
+      document.getElementById('result').classList.remove('hidden');
+      document.getElementById('fuel-chart').classList.remove('hidden');
+      chartContainer.classList.remove('hidden');
+
+      // Preparing the data
+      const labels = ['Current MPG', 'Target MPG', 'Fuel Saved'];
+      const data = [currentMpg, targetMpg, fuelSaved];
+
+      // create the chart
+      if (fuelChart) {
+        fuelChart.data.datasets[0].data = data;
+        fuelChart.update();
+      } else {
+        fuelChart = new Chart(fuelChartCanvas, {
+          type: 'pie',
+          data: {
+            labels: labels,
+            datasets: [
+              {
+                label: 'Fuel Economy Analysis',
+                data: data,
+                backgroundColor: [
+                  'rgba(75, 192, 192, 0.2)',
+                  'rgba(153, 102, 255, 0.2)',
+                  'rgba(255, 99, 132, 0.2)',
+                ],
+                borderColor: [
+                  'rgba(75, 192, 192, 1)',
+                  'rgba(153, 102, 255, 1)',
+                  'rgba(255, 99, 132, 1)',
+                ],
+                borderWidth: 1,
+              },
+            ],
+          },
+
+          // bar graph
+          // options: {
+          //   scales: {
+          //     y: {
+          //       beginAtZero: true,
+          //     },
+          //   },
+          // },
+
+          // pie chart
+          options: {
+            responsive: true,
+            plugins: {
+              legend: {
+                position: 'top',
+              },
+              tooltip: {
+                callbacks: {
+                  label: function () {
+                    return `${tooltipItem.label}: ${tooltipItem.raw} MPG`;
+                  },
+                },
+              },
+            },
+          },
+
+          // radar chart
+          // options: {
+          //   scales: {
+          //     r: {
+          //       min: 0,
+          //       max: 50,
+          //       ticks: {
+          //         stepSize: 10,
+          //       },
+          //     },
+          //   },
+          // },
+        });
+      }
+    } else {
+      document.getElementById('fuel-saved').innerText =
+        'Invalid input. Please check your values.';
+      document.getElementById('result').classList.remove('hidden');
+    }
+    Loading.classList.add('hidden');
+  }, 1000);
+});
