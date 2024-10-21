@@ -1,10 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="blog.css" />
-  </head>
-  <body></body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Fuel Analysis Blog</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #444;
+            padding: 10px;
+        }
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+        }
+        .container {
+            width: 90%;
+            margin: 20px auto;
+        }
+        .blog-post {
+            background-color: white;
+            margin-bottom: 20px;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .blog-post h2 {
+            color: #333;
+        }
+        .blog-post p {
+            color: #555;
+            line-height: 1.6;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+        }
+
+        @media screen and (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Fuel Analysis Blog</h1>
+    <p>Insights and research on fuel efficiency, sustainability, and more.</p>
+</header>
+
+<nav>
+    <a href="#">Home</a>
+    <a href="#">Articles</a>
+    <a href="#">Contact</a>
+</nav>
+
+<div class="container">
+    <!-- Blog Post 1 -->
+    <div class="blog-post">
+        <h2>The Impact of Fuel Efficiency on the Environment</h2>
+      <p>
+Fuel efficiency is not just a buzzword in the automotive world—it’s a critical factor in reducing our environmental footprint. As the world grapples with the twin challenges of climate change and dwindling natural resources, improving fuel efficiency in vehicles can make a significant difference in how we address these issues. Let's explore how fuel efficiency impacts the environment and why it matters.
+
+ 1. Reducing Greenhouse Gas Emissions
+
+One of the most immediate benefits of fuel-efficient vehicles is the reduction in greenhouse gas (GHG) emissions. Internal combustion engines (ICE) that burn fossil fuels like gasoline and diesel emit carbon dioxide (CO₂), the primary contributor to global warming. The more fuel a vehicle consumes, the more CO₂ it releases into the atmosphere.
+
+By increasing fuel efficiency, vehicles burn less fuel over the same distance, which directly translates into lower CO₂ emissions. According to the U.S. Environmental Protection Agency (EPA), transportation accounts for nearly 30% of total U.S. greenhouse gas emissions, with passenger vehicles being a significant contributor. Enhancing fuel efficiency, particularly for personal and commercial vehicles, can dramatically cut these emissions, helping mitigate the impact of climate change.
+ </p>
+      </div>
+
+    <!-- Blog Post 2 -->
+    <div class="blog-post">
+        <h2>How to Analyze Fuel Consumption in Cars</h2>
+        <p>Analyzing fuel consumption can help both manufacturers and consumers make better choices for energy-saving vehicles. Understanding your vehicle's fuel consumption involves evaluating various factors such as driving habits, engine condition, and fuel type. Learn how you can analyze and improve your vehicle’s performance in this guide.</p>
+    </div>
+
+    <!-- Blog Post 3 -->
+    <div class="blog-post">
+        <h2>The Future of Renewable Fuels</h2>
+        <p>Renewable fuels are at the forefront of sustainable energy solutions. As traditional fossil fuels deplete, alternatives like biofuels, hydrogen, and electric energy are becoming more viable. What does the future hold for renewable fuels? In this article, we explore current developments and future predictions in renewable fuel technology.</p>
+    </div>
+
+    <!-- Contact Form -->
+    <h2>Leave a Comment or Question</h2>
+    <form id="commentForm">
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name"><br><br>
+
+        <label for="comment">Comment:</label><br>
+        <textarea id="comment" name="comment"></textarea><br><br>
+
+        <input type="button" value="Submit" onclick="submitForm()">
+    </form>
+</div>
+
+<footer>
+    <p>&copy; 2024 Fuel Analysis Blog | All Rights Reserved</p>
+</footer>
+
+<!-- Inline JavaScript for form handling -->
+<script>
+    function submitForm() {
+        var name = document.getElementById("name").value;
+        var comment = document.getElementById("comment").value;
+
+        if (name === "" || comment === "") {
+            alert("Please fill in both fields.");
+        } else {
+            alert("Thank you, " + name + "! Your comment: '" + comment + "' has been submitted.");
+            document.getElementById("commentForm").reset();
+        }
+    }
+</script>
+
+</body>
 </html>
