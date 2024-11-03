@@ -4,7 +4,198 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="FAQ.css" />
+    <style>
+      
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.6;
+  color: var(--text-color);
+  background: #b7dada;
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+.nav-bar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Aligns items vertically centered */
+  background-color: #2c3e50; /* Matches footer color */
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+.nav-bar-logo {
+  padding-left: 10px;
+  color: #ffffff;
+  width: 80px;
+  height: auto;
+}
+
+.navbar {
+  display: flex; /* Ensures nav items are in a single row */
+  align-items: center;
+}
+
+.navbar ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex; /* Flex display for inline nav items */
+}
+
+.navbar .nav-item {
+  margin: 0 10px; /* Small space between each item */
+}
+
+.navbar .nav-link {
+  text-decoration: none;
+  color: #ffffff; /* White text for readability */
+  font-size: larger;
+  padding: 10px 15px;
+  display: block;
+
+}
+
+.navbar .nav-link:hover {
+  background-color: var(--primary-color);
+  color: #333333;
+  border-radius: 4px;
+}
+
+/* Footer section details*/
+.fuel-economy-footer {
+  background: #2c3e50;
+  color: #ffffff;
+  padding: 3rem 0 1rem;
+  font-family: 'Arial', sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footer-section {
+  flex: 1 1 250px;
+  margin-bottom: 2rem;
+}
+
+.footer-section h3 {
+  color: #1eb19d;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.footer-section h3::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 50px;
+  height: 2px;
+  background-color: #0a0a09;
+}
+
+.footer-section p,
+.footer-section ul {
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.footer-section ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-section a {
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-section a:hover {
+  color: #ffd700;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 2rem;
+  margin-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 0.8rem;
+}
+
+.footer-bottom a {
+  color: #ffd700;
+  text-decoration: none;
+}
+
+.footer-bottom a:hover {
+  text-decoration: underline;
+}
+
+.footer-section {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.footer-section h3::after {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.images-section {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr); /* 12 equal columns */
+  grid-template-rows: repeat(2, auto); /* 2 rows */
+  gap: 1.5rem; /* Space between cards */
+  max-width: 1200px; /* Control overall section width */
+  margin: 0 auto;
+}
+
+.card {
+  background-color: var(--card-background);
+  border: 1px solid var(--border-color);
+  border-radius: 0.375rem;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  grid-column: span 6; /* Each card spans 6 columns to create two per row */
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card-img {
+  width: 100%;
+  height: auto;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.card-text {
+  padding: 1.5rem;
+  font-size: 1.1rem;
+  color: var(--text-color);
+  text-align: center;
+}
+
+    </style>
   </head>
   <body>
     <div class="nav-bar-container">
@@ -17,7 +208,7 @@
             <a class="nav-link" href="/courses"><strong>Courses</strong></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/FAQs"><strong>FAQs</strong></a>
+            <a class="nav-link" href="/images"><strong>Images</strong></a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="/blog"><strong>Blog</strong></a>
@@ -26,160 +217,39 @@
             <a class="nav-link" href="/about"><strong>About</strong></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="login.html"
-              ><strong>Login/Signup</strong></a
-            >
+            <a class="nav-link" href="login.html"><strong>Login/Signup</strong></a>
           </li>
         </ul>
       </nav>
     </div>
-    <section class="Section" id="FAQs">
-      <h2 class="section-title">FAQs</h2>
+    <section class="Section" id="images">
+      <h2 class="section-title"></h2>
       <br />
-      <div class="FAQs-section">
-        <div class="FAQs-container">
-          <div class="FAQs-section-container" data-faq="1">
-            <h3 class="Question">
-              What is fuel economy and why is it important?
-            </h3>
-            <ul class="answer hidden">
-              <li>
-                Fuel economy refers to how efficiently a vehicle uses fuel,
-                usually measured in miles per gallon (MPG) or liters per 100
-                kilometers (L/100km). It is important because higher fuel
-                economy means lower fuel consumption, which can save money and
-                reduce environmental impact by cutting down on greenhouse gas
-                emissions.
-              </li>
-            </ul>
-          </div>
-          <div class="FAQs-section-container" data-faq="2">
-            <h3 class="Question">How is fuel economy calculated?</h3>
-            <ul class="answer hidden">
-              <li>
-                Fuel economy is calculated by dividing the distance a vehicle
-                travels by the amount of fuel consumed. For example, if a car
-                travels 300 miles and uses 10 gallons of fuel, the fuel economy
-                is 30 MPG (miles per gallon).
-              </li>
-            </ul>
-          </div>
-          <div class="FAQs-section-container" data-faq="3">
-            <h3 class="Question">
-              What factors affect a vehicle’s fuel economy?
-            </h3>
-            <ul class="answer hidden">
-              <li>
-                Several factors affect fuel economy, including driving habits,
-                vehicle maintenance, weather conditions, load weight,
-                aerodynamics, and the type of fuel used. For example, aggressive
-                driving, heavy loads, and under-inflated tires can decrease fuel
-                economy.
-              </li>
-            </ul>
-          </div>
-          <div class="FAQs-section-container" data-faq="4">
-            <h3 class="Question">
-              How can I improve my vehicle’s fuel economy?
-            </h3>
-            <ul class="answer hidden">
-              <li>
-                You can improve fuel economy by maintaining proper tire
-                pressure, reducing excess weight in the vehicle, avoiding
-                aggressive driving, keeping your engine properly tuned, and
-                using the recommended grade of motor oil. Additionally, driving
-                at moderate speeds and using cruise control on highways can
-                help.
-              </li>
-            </ul>
-          </div>
-          <div class="FAQs-section-container" data-faq="5">
-            <h3 class="Question">
-              How do hybrid and electric vehicles improve fuel economy?
-            </h3>
-            <ul class="answer hidden">
-              <li>
-                Hybrid vehicles combine a gasoline engine with an electric
-                motor, allowing for better fuel economy by using electric power
-                at lower speeds or during idling. Electric vehicles (EVs) don't
-                use gasoline at all, relying entirely on electric power, which
-                can dramatically improve efficiency and reduce fuel costs.
-              </li>
-            </ul>
-          </div>
+      <div class="images-section">
+        <!-- Card 1 -->
+        <div class="card">
+          <img src="./images/SysProImage1.webp" alt="Image 1" class="card-img" />
+          <p class="card-text"></p>
         </div>
-        <div class="FAQs-container">
-          <div class="FAQs-section-container" data-faq="6">
-            <h3 class="Question">
-              What is the EPA’s role in fuel economy ratings?
-            </h3>
-            <ul class="answer hidden">
-              <li>
-                The Environmental Protection Agency (EPA) tests vehicles and
-                provides official fuel economy ratings in the U.S. These ratings
-                help consumers compare different vehicles' fuel efficiency. The
-                tests are conducted under controlled conditions to simulate city
-                and highway driving.
-              </li>
-            </ul>
-          </div>
-          <div class="FAQs-section-container" data-faq="7">
-            <h3 class="Question">
-              Does the type of fuel I use affect fuel economy?
-            </h3>
-            <ul class="answer hidden">
-              <li>
-                Yes, the type of fuel can affect fuel economy. For example,
-                higher-octane fuels may not necessarily improve fuel efficiency
-                in engines designed for regular fuel. Ethanol-blended fuels can
-                also reduce fuel economy slightly because ethanol contains less
-                energy per gallon than gasoline.
-              </li>
-            </ul>
-          </div>
-          <div class="FAQs-section-container" data-faq="8">
-            <h3 class="Question">
-              What is the difference between fuel economy and fuel efficiency?
-            </h3>
-            <ul class="answer hidden">
-              <li>
-                While often used interchangeably, fuel economy refers to how far
-                a vehicle can travel on a certain amount of fuel, typically
-                expressed in MPG or L/100km. Fuel efficiency, on the other hand,
-                refers to how effectively the engine converts fuel into usable
-                energy, and is a more technical measure of engine performance.
-              </li>
-            </ul>
-          </div>
-          <div class="FAQs-section-container" data-faq="9">
-            <h3 class="Question">
-              What is the difference between conventional gasoline vehicles and
-              fuel-efficient models?
-            </h3>
-            <ul class="answer hidden">
-              <li>
-                Fuel-efficient vehicles are designed with technologies like
-                turbocharging, direct injection, lighter materials, and improved
-                aerodynamics to maximize fuel economy. In contrast, conventional
-                gasoline vehicles typically don't include these advanced
-                features and may have lower MPG ratings.
-              </li>
-            </ul>
-          </div>
-          <div class="FAQs-section-container" data-faq="10">
-            <h3 class="Question">
-              Are fuel economy estimates accurate for real-world driving?
-            </h3>
-            <ul class="answer hidden">
-              <li>
-                Fuel economy estimates provided by the EPA or manufacturers are
-                based on controlled tests and may not exactly reflect real-world
-                driving conditions. Actual fuel economy may vary depending on
-                factors such as driving habits, road conditions, weather, and
-                vehicle maintenance.
-              </li>
-            </ul>
-          </div>
+        <!-- Card 2 -->
+        <div class="card">
+          <img src="./images/SysProImage2.jpg" alt="Image 2" class="card-img" />
+          <p class="card-text"></p>
+        </div>
+        <!-- Card 3 -->
+        <div class="card">
+          <img src="./images/SysProImage3.jpg" alt="Image 3" class="card-img" />
+          <p class="card-text"></p>
+        </div>
+        <!-- Card 4 -->
+        <div class="card">
+          <img src="./images/SysProImage4.png" alt="Image 4" class="card-img" />
+          <p class="card-text"></p>
+        </div>
+        <!-- Card 5 -->
+        <div class="card">
+          <img src="./images/SysProImage5.png" alt="Image 5" class="card-img" />
+          <p class="card-text"></p>
         </div>
       </div>
     </section>
