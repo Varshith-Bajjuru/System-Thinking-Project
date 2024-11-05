@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculation</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="calculation.css">
+    <style>
+        /* Style for the form container */
+        .container h3 {
+            font-family: Arial, sans-serif;
+            font-weight: bold;
+            color: #333;
+        }
+
+        form {
+            background-color: #f9f9f9;
+            border-radius: 10px;
+        }
+
+        .shadow {
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Custom button styles for car selection */
+        .car-btn {
+            background-color: #007bff;
+            color: white;
+            font-weight: bold;
+        }
+
+        .car-btn:hover {
+            background-color: #0056b3;
+        }
+
+        #emissionResult {
+            color: #007bff;
+            font-size: 1.2rem;
+        }
+
+        /* Styling for car images and button layout */
+        .car-item {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .car-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            transition: transform 0.3s;
+        }
+
+        .car-item img:hover {
+            transform: scale(1.05);
+        }
+        /* Footer section details*/
+.fuel-economy-footer {
+    background: #2c3e50;
+    color: #ffffff;
+    padding: 3rem 0 1rem;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .footer-section {
+    flex: 1 1 250px;
+    margin-bottom: 2rem;
+  }
+  
+  .footer-section h3 {
+    color: #1eb19d;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    position: relative;
+  }
+  
+  .footer-section h3::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 50px;
+    height: 2px;
+    background-color: #0a0a09;
+  }
+  
+  .footer-section p,
+  .footer-section ul {
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+  
+  .footer-section ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .footer-section ul li {
+    margin-bottom: 0.5rem;
+  }
+  
+  .footer-section a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .footer-section a:hover {
+    color: #ffd700;
+  }
+  .nav-bar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Aligns items vertically centered */
+    background-color: #2c3e50; /* Matches footer color */
+    padding: 10px 20px;
+    border-radius: 5px;
+  }
+  
+  .nav-bar-logo {
+    padding-left: 10px;
+    color: #ffffff;
+    width: 80px;
+    height: auto;
+  }
+  
+  .navbar {
+    display: flex; /* Ensures nav items are in a single row */
+    align-items: center;
+  }
+  
+  .navbar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex; /* Flex display for inline nav items */
+  }
+  
+  .navbar .nav-item {
+    margin: 0 10px; /* Small space between each item */
+  }
+  
+  .navbar .nav-link {
+    text-decoration: none;
+    color: #ffffff; /* White text for readability */
+    font-size: larger;
+    padding: 10px 15px;
+    display: block;
+  
+  }
+  
+  .navbar .nav-link:hover {
+    background-color: var(--primary-color);
+    color: #333333;
+    border-radius: 4px;
+  }
+  .footer-bottom {
+    text-align: center;
+    padding-top: 2rem;
+    margin-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 0.8rem;
+  }
+  
+  .footer-bottom a {
+    color: #ffd700;
+    text-decoration: none;
+  }
+  
+  .footer-bottom a:hover {
+    text-decoration: underline;
+  }
+  
+  .footer-section {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .footer-section h3::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+    </style>
+</head>
+<body>
+    <div class="nav-bar-container">
+        <nav class="navbar main">
+          <ul>
+            <li class="nav-item">
+              <a class="nav-link" href="/home"><strong>Home</strong></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/courses"><strong>Courses</strong></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/images"><strong>Images</strong></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/thesis"><strong>Thesis</strong></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/about"><strong>About</strong></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/calculation"><strong>Calculation</strong></a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    <div class="container mt-5">
+        <h3 class="text-center mb-4">Car Emissions Calculator</h3>
+
+        <!-- Form for user input with styling -->
+        <div class="row justify-content-center">
+            <div class="col-md-6 p-4 shadow rounded">
+                <form id="emissionForm">
+                    <div class="mb-3">
+                        <label for="fuelConsumption" class="form-label">Fuel Consumption (kmpl)</label>
+                        <input type="number" step="0.1" class="form-control" id="fuelConsumption" placeholder="Enter fuel consumption (kmpl)">
+                    </div>
+                    <button type="button" class="btn btn-primary w-100" onclick="displayEmissions()">Calculate Emissions</button>
+                </form>
+                <p id="emissionResult" class="mt-4 text-center fw-bold"></p>
+            </div>
+        </div>
+    </div>
+    <!-- Predefined Cars Section with images and buttons together -->
+    <div class="container mt-5">
+        <h4 class="mb-4">Select a Car for Emission Calculation</h4>
+        <div class="row row-cols-1 row-cols-md-3 gx-4 gy-4">
+            <div class="col car-item">
+                <img src="images/n1.webp" alt="Car 1" class="img-fluid mb-2">
+                <button class="btn car-btn w-100" onclick="displayCarEmissions(20)">Tata Curvv</button>
+            </div>
+            <div class="col car-item">
+                <img src="images/n2.webp" alt="Car 2" class="img-fluid mb-2">
+                <button class="btn car-btn w-100" onclick="displayCarEmissions(21)">Mahindra Thar Roxx</button>
+            </div>
+            <div class="col car-item">
+                <img src="images/n10.webp" alt="Car 3" class="img-fluid mb-2">
+                <button class="btn car-btn w-100" onclick="displayCarEmissions(18)">Mahindra XUV 3XO</button>
+            </div>
+            <div class="col car-item">
+                <img src="images/n4.webp" alt="Car 4" class="img-fluid mb-2">
+                <button class="btn car-btn w-100" onclick="displayCarEmissions(15)">Tata Nexon</button>
+            </div>
+            <div class="col car-item">
+                <img src="images/n5.webp" alt="Car 5" class="img-fluid mb-2">
+                <button class="btn car-btn w-100" onclick="displayCarEmissions(22)">Toyota Urban Cruiser Hyryder</button>
+            </div>
+            <div class="col car-item">
+                <img src="images/n6.webp" alt="Car 6" class="img-fluid mb-2">
+                <button class="btn car-btn w-100" onclick="displayCarEmissions(19)">Hyundai Creta</button>
+            </div>
+            <div class="col car-item">
+                <img src="images/n7.webp" alt="Car 7" class="img-fluid mb-2">
+                <button class="btn car-btn w-100" onclick="displayCarEmissions(20)">Kia Seltos</button>
+            </div>
+            <div class="col car-item">
+                <img src="images/n8.webp" alt="Car 8" class="img-fluid mb-2">
+                <button class="btn car-btn w-100" onclick="displayCarEmissions(21)">Hyundai Venue</button>
+            </div>
+            <div class="col car-item">
+                <img src="images/n9.webp" alt="Car 9" class="img-fluid mb-2">
+                <button class="btn car-btn w-100" onclick="displayCarEmissions(16)">Nissan Magnite</button>
+            </div>
+        </div>
+    </div>
+    <footer class="fuel-economy-footer">
+        <div class="footer-container">
+          <div class="footer-section">
+            <h3>About Us</h3>
+            <p>
+              We're dedicated to providing comprehensive fuel economy analysis to
+              help you make informed decisions about your vehicle's efficiency.
+            </p>
+          </div>
+          <div class="footer-section">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="#home">Home</a></li>
+              <li><a href="#analysis">Analysis Tools</a></li>
+              <li><a href="#data">Data Insights</a></li>
+              <li><a href="#blog">Blog</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h3>Contact Us</h3>
+            <p>Email: teamfueleconomyanalysis77@gmail.com</p>
+            <p>Phone: +91 9110385587</p>
+            <p>Address: iiit dharward , 580009</p>
+          </div>
+          <div class="footer-section">
+            <h3>Stay Connected</h3>
+            <div class="social-icons">
+              <a
+                href="https://www.facebook.com"
+                class="social-icon facebook"
+                aria-label="Facebook"
+                ><i class="fab fa-facebook"></i
+              ></a>
+              <a
+                href="https://www.twitter.com"
+                class="social-icon twitter"
+                aria-label="Twitter"
+                ><i class="fab fa-twitter"></i
+              ></a>
+              <a
+                href="https://www.linkedin.com"
+                class="social-icon linkedin"
+                aria-label="LinkedIn"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+              <a
+                href="https://www.instagram.com"
+                class="social-icon instagram"
+                aria-label="Instagram"
+                ><i class="fab fa-instagram"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2024 Fuel Economy Analysis. All rights reserved.</p>
+          <p>
+            <a href="#privacy">Privacy Policy</a> |
+            <a href="#terms">Terms of Service</a>
+          </p>
+        </div>
+      </footer>
+    <script>
+        // Function to calculate emissions based on kmpl
+        function calculateEmissions(kmpl) {
+            const LITERS_PER_100KM = 100 / kmpl; // Convert kmpl to L/100km
+            const CO2_PER_LITER = 2392; // g CO2 emitted per liter of fuel
+            return (LITERS_PER_100KM * CO2_PER_LITER); // Emissions in grams/km
+        }
+
+        // Function to calculate and display emissions along with the tree offset
+        function displayEmissions() {
+            const fuelConsumption = document.getElementById("fuelConsumption").value;
+            if (fuelConsumption) {
+                const emissions = calculateEmissions(parseFloat(fuelConsumption));
+                const treesNeededPerKm = Math.ceil(emissions / 22000);
+                const totalTreesNeeded = Math.ceil(treesNeededPerKm * 100);
+
+                document.getElementById("emissionResult").innerHTML = 
+                    `CO₂ Emissions: ${emissions.toFixed(2)} g/km <br>` +
+                    `Trees needed to offset emissions (per km): ${treesNeededPerKm} trees<br>` +
+                    `Total trees needed for 100 km: ${totalTreesNeeded} trees`;
+                
+                // Scroll to the emission result
+                document.getElementById("emissionResult").scrollIntoView({ behavior: "smooth" });
+            } else {
+                document.getElementById("emissionResult").innerText = 
+                    "Please enter a valid fuel consumption value.";
+                document.getElementById("emissionResult").scrollIntoView({ behavior: "smooth" });
+            }
+        }
+
+        // Function to display emissions and tree requirement for predefined cars
+        function displayCarEmissions(kmpl) {
+            const emissions = calculateEmissions(kmpl);
+            const treesNeededPerKm = Math.ceil(emissions / 22000);
+            const totalTreesNeeded = Math.ceil(treesNeededPerKm * 100);
+
+            document.getElementById("emissionResult").innerHTML = 
+                `<span class="co2-emissions">CO₂ Emissions for selected car: ${emissions.toFixed(2)} g/km</span> <br>` +
+                `<img src="images/tree.png" alt="Tree icon" style="width:40px; height:40px;"> Trees needed to offset emissions (per km): ${treesNeededPerKm} trees<br>` +
+                `<img src="images/tree.png" alt="Tree icon" style="width:40px; height:40px;"> Total trees needed for 100 km: ${totalTreesNeeded} trees`;
+            
+            // Scroll to the emission result
+            document.getElementById("emissionResult").scrollIntoView({ behavior: "smooth" });
+        }
+    </script>
+    
+    
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6XoTnrJEN7jkQKTbOYyZgm2Aaa5qHnN1gh" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-CmOy8v1qfDaAPMZAVe+oi/Z9qM2fkt+dztTGBXX02kR5N/14Q4z4MAdH63k05j9V" crossorigin="anonymous"></script>
+</body>
+</html>

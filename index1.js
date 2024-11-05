@@ -17,8 +17,8 @@ app.get("/", (req, res) => {
   res.sendFile(__dirname + "/public/main.html");
 });
 
-app.get("/blog", (req, res) => {
-  res.sendFile(path.join(__dirname + "/public/blog.html"));
+app.get("/calculation", (req, res) => {
+  res.sendFile(path.join(__dirname + "/public/caluclation.html"));
 });
 
 app.get("/home",(req,res)=>{
@@ -36,6 +36,10 @@ app.get("/about",(req,res)=>{
 
 app.get('/images',(req,res)=>{
   res.sendFile(__dirname+"/public/FAQs.html")
+})
+
+app.get('/thesis',(req,res)=>{
+  res.sendFile(__dirname+"/public/Thsis.html")
 })
 
 app.listen(port, () => {
