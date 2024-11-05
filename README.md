@@ -89,7 +89,6 @@ To provide universal access to affordable, clean energy, and reduce reliance on 
 
 ---
 
-> **Contributors:** Your Name, Team Members (if any)
+> **Contributors:** Varshith,Jagedeeshwar and Ankit
 
-> **License:** MIT License
 
